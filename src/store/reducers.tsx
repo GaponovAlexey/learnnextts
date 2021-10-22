@@ -1,27 +1,5 @@
-enum TypeActionType {
-	LOADING_DATA = 'LOADING_DATA',
-	ADD_DATA_SUCCEES = 'ADD_DATA_SUCCEES',
-	ERROR_WOTCH = 'ERROR_WOTCH'
-}
+import { ActionType, TypeActionType, typeInitialState } from "../types"
 
-interface typeInitialState {
-	users: any,
-	loading: boolean,
-	error: null | string
-}
-
-interface isLoadingType {
-	type: TypeActionType.LOADING_DATA
-	payload: boolean
-}
-interface isAddSuccessType {
-	type: TypeActionType.ADD_DATA_SUCCEES
-	payload: any
-}
-interface isErrorType {
-	type: TypeActionType.ERROR_WOTCH
-	payload: string
-}
 
 
 
@@ -31,7 +9,7 @@ const initialState: typeInitialState = {
 	error: null
 }
 
-type ActionType = isLoadingType | isAddSuccessType | isErrorType
+
 
 export const UsersRedusers = (state = initialState, action: ActionType) => {
 	switch (action.type) {
