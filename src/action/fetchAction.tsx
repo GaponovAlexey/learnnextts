@@ -9,7 +9,7 @@ export const fetchAction = () => {
 			const response = await axios.get("https://jsonplaceholder.typicode.com/users")
 			setTimeout(() => {
 				dispatch({ type: TypeActionType.ADD_DATA_SUCCEES, payload: response.data })
-			}, 5000);
+			}, 500);
 		} catch (e) {
 			dispatch({ type: TypeActionType.ERROR_WOTCH, payload: "ERROR" })
 		}

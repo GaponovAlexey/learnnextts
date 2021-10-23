@@ -1,15 +1,11 @@
 import { ActionType, TypeActionType, typeInitialState } from "../types/users"
 
 
-
-
 const initialState: typeInitialState = {
 	users: [],
 	loading: false,
 	error: null
 }
-
-
 
 export const UsersRedusers = (state = initialState, action: ActionType): typeInitialState => {
 	switch (action.type) {
