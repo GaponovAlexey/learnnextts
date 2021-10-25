@@ -11,7 +11,7 @@ const initialState: typeInitialState = {
 
 
 
-export const UsersRedusers = (state = initialState, action: ActionType) => {
+export const UsersRedusers = (state = initialState, action: ActionType): typeInitialState => {
 	switch (action.type) {
 		case TypeActionType.LOADING_DATA:
 			return { loading: true, error: null, users: [] }
