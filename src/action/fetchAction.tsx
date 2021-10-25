@@ -1,15 +1,17 @@
 import axios from "axios"
 import { Dispatch } from "react"
-import { ActionType, TypeActionType } from "../types"
+import { ActionType, TypeActionType } from "../types/users"
 
 export const fetchAction = () => {
 	return async (dispatch: Dispatch<ActionType>) => {
 		try {
 			dispatch({ type: TypeActionType.LOADING_DATA })
 			const response = await axios.get("https://jsonplaceholder.typicode.com/users")
-			dispatch({ type: TypeActionType.ADD_DATA_SUCCEES, payload: response.data })
+			setTimeout(() => {
+				dispatch({ type: TypeActionType.ADD_DATA_SUCCEES, payload: response.data })
+			}, 500);
 		} catch (e) {
-			dispatch({ type: TypeActionType.ERROR_WOTCH, payload: 'oшибка передавать сюда пейлоад' })
+			dispatch({ type: TypeActionType.ERROR_WOTCH, payload: "ERROR" })
 		}
 	}
 }

@@ -1,6 +1,4 @@
-import { ActionType, TypeActionType, typeInitialState } from "../types"
-
-
+import { ActionType, TypeActionType, typeInitialState } from "../types/users"
 
 
 const initialState: typeInitialState = {
