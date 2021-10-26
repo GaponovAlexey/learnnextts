@@ -9,6 +9,10 @@ const rootReducer = combineReducers({
 	todos: reduserTodo
 })
 
+
+
+
+
 export const store = createStore(rootReducer, applyMiddleware(thunk))
 
 export type RootStateType = ReturnType<typeof rootReducer>

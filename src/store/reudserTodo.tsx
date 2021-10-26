@@ -1,3 +1,4 @@
+import { createSlice } from "@reduxjs/toolkit"
 import { ActionTypeTuduSuccess, initStateInter, TodoActionsType } from "../types/todoType"
 
 
@@ -17,3 +18,16 @@ export const reduserTodo = (state = initialState, action: ActionTypeTuduSuccess)
 			return state
 	}
 }
+
+
+//export const reduserSlice = createSlice({
+//	name: 'todos',
+//	initialState,
+//	reducers: {
+//		addTodo(state, actions) {
+//			state.user += actions.payload
+//		}
+//	}
+//})
+
+//export const { }

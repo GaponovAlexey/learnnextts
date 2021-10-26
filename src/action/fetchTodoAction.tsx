@@ -7,9 +7,8 @@ export const fetchActionTodo = (page = 1, limit = 10) => {
 		const response = await axios.get("https://jsonplaceholder.typicode.com/todos", {
 			params: { _page: page, _params: limit }
 		})
-		setTimeout(() => {
 			dispatch({ type: TodoActionsType.TODO_ADD, payload: response.data })
-		}, 500);
+			
 	}
 }
 
