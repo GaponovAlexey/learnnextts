@@ -6,8 +6,7 @@ import { useTypeSelector } from '../src/hooks/useTypeSelector'
 const Home: React.FC = () => {
   const { error, loading, users } = useTypeSelector(state => state.users)
   const { limit, page, user } = useTypeSelector(state => state.todos)
-  //const data = useSelector(state => state.users.users)
-  const { fetchAction, pageAction, fetchActionTodo } = useAction()
+  const { fetchAction, fetchActionTodo, pageAction } = useAction()
 
   const pages = [1, 2, 3, 4, 5, 6]
   useEffect(() => {
