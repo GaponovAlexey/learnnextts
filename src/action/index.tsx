@@ -6,4 +6,5 @@ import * as todo from './fetchTodoAction'
 export default {
 	...user,
 	...todo
+	
 }

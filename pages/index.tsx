@@ -27,7 +27,7 @@ const Home: React.FC = () => {
       {users.map(e => <h3 key={e.id}>{e.name}</h3>)}
       <hr></hr>
       <div>
-        {user.map(todo => <div key={todo.id} >{todo.id} - {todo.title}</div>)}
+        {user.map((todo: any) => <div key={todo.id} >{todo.id} - {todo.title}</div>)}
         <div style={{ display: 'flex' }}>
           {pages.map(p => <div
             onClick={() => pageAction(p)}

@@ -18,16 +18,3 @@ export const reduserTodo = (state = initialState, action: ActionTypeTuduSuccess)
 			return state
 	}
 }
-
-
-//export const reduserSlice = createSlice({
-//	name: 'todos',
-//	initialState,
-//	reducers: {
-//		addTodo(state, actions) {
-//			state.user += actions.payload
-//		}
-//	}
-//})
-
-//export const { }
